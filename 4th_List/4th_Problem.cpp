@@ -2,8 +2,7 @@
 using namespace std;
 
 int main(){
-    int x[20], i, diff, index1, index2;
-    bool a;
+    int x[20], i, diff, index1, index2, a;
 
     diff = 0;
 
@@ -33,8 +32,8 @@ int main(){
             }
         cout << "\nBiggest difference between consecutive indexes: " << diff << "\nIndexes that form it: " << index1 << " and " << index2;
         do{
-        cout << "\nWanna do it again? [ 1 - Yes / 0 - No ] ";
-        cin >> a;
+            cout << "\nWanna run the program again? [ 1 - Yes / 0 - No ] ";
+            cin >> a;
         } while ( a != 0 && a != 1 );
-    } while (a);
+    } while (a == 1);
 }

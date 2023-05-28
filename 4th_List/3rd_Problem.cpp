@@ -2,8 +2,7 @@
 using namespace std;
 
 int main(){
-    int x[15], code, i;
-    bool a;
+    int x[15], code, i, a;
 
     do{
         for ( i = 0; i < 15; i++ ){
@@ -32,8 +31,8 @@ int main(){
         }
 
         do{
-        cout << "\nWanna do it again? [ 1 - Yes / 0 - No ] ";
-        cin >> a;
+            cout << "\nWanna run the program again? [ 1 - Yes / 0 - No ] ";
+            cin >> a;
         } while ( a != 0 && a != 1 );
-    } while (a);
+    } while (a == 1);
 }
