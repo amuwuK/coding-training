@@ -1,8 +1,3 @@
-/*Elabore um algoritmo que leia uma frase em uma string e uma palavra em outra string, verifique e escreva se
-a palavra está contida na frase.
-Entradas: “esta é a frase” e “frase”
-Saída: a palavra “frase” está contida na frase “esta é a frase”.*/
-
 #include <iostream>
 #include <string>
 using namespace std;
@@ -17,14 +12,15 @@ int main(){
         cout << "\nType a phrase: ";
         getline (cin, phrase);
 
-        
+        for ( i = 0; i <= phrase.length() ; i++ )
             if ( ( phrase[i] < 97 ) && ( phrase[i] != ' ' ))
                 phrase[i] += 32;
-        for ( i = 0; i <= phrase.length() - 6; i++ ){
+        
+        for ( i = 0; i <= phrase.length() - 6; i++ )
             if ( ( phrase.substr(i, 6) == "phrase" ) && ( !found ) )
                 found = 1;
-        }
         
+        phrase[0] -= 32;
 
         if ( found )
             cout << "The word 'phrase' was found in '" << phrase << "'!";

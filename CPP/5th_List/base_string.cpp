@@ -6,7 +6,7 @@ int main(){
     string phrase, a;
 
     do{
-        cout << "\nInsert a phrase here: ";
+        cout << "\nType a phrase here: ";
         getline (cin, phrase);
 
 
