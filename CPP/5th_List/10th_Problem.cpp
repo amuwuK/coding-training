@@ -3,10 +3,10 @@ using namespace std;
 
 int main(){
     int const qnt = 5;
-    int a, x[qnt][qnt], i, j, v[qnt*qnt], n, k;
+    int a, x[qnt][qnt], i, j, average;
 
     do{
-        k = 0;
+        average = 0;
         system ("cls");
         for ( i=0; i < qnt; i++ ){
             for ( j=0; j < qnt; j++ ){
@@ -15,12 +15,20 @@ int main(){
             }
         }
 
+        cout << "\nMatrix X[" << qnt << "][" << qnt << "]\n";
         for ( i = 0; i < qnt; i++ ){
             for ( j = 0; j < qnt; j++ ){
-
+                cout << x[i][j] << "\t";
+                if ( ( i == j ) && ( i != qnt - 1 ) ){
+                    average += x[i+1][j];
+                }
             }
+            cout << "\n";
         }
 
+        average /= ( qnt - 1 );
+
+        cout << "\nAverage of every number below the main diagonal: " << average;
 
         
         do{
